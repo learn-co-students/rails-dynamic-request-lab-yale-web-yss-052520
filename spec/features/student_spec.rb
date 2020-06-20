@@ -5,6 +5,7 @@ describe 'Route to view' do
     visit "/students"
 
     expect(page.status_code).to eq(200)
+
   end
 end
 
@@ -33,6 +34,7 @@ describe 'Show page' do
     visit "students/#{@student.id}"
     expect(page).to have_css("h1", text: "Daenerys")
   end
+
 
   it 'renders the last name in a h1 tag' do
     visit "students/#{@student.id}"
